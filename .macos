@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# ~/.macos — https://github.com/kentcdodds/dotfiles/blob/master/.macos
+# Modified by Carlos Torres
+# Run without downloading:
+# curl https://raw.githubusercontent.com/govea/dotfiles/master/.macos | bash
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# Carlos' Customizations                                                       #
+###############################################################################
+
+echo "Hello $(whoami)! Let's get you set up."
+
+echo "mkdir -p ${HOME}/dev"
+mkdir -p "${HOME}/dev"
+
+echo "installing homebrew"
+# install homebrew https://brew.sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "brew installing git"
+brew install git
+
+
+###############################################################################
+# Applications                                                                #
+###############################################################################
+
+echo "installing node (via n-install)"
+curl -L https://git.io/n-install | bash
+
+echo "installing apps with brew cask"
+brew cask install alfred rectangle hyper insomnia
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
