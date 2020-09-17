@@ -40,7 +40,7 @@ echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
 
 echo "installing apps with brew cask"
-brew cask install alfred rectangle hyper insomnia visual-studio-code
+brew cask install alfred rectangle hyper insomnia visual-studio-code fork
 
 
 ###############################################################################
@@ -70,8 +70,8 @@ defaults write com.apple.dock mineffect -string "scale"
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.Dock showhidden -bool YES
 
-# Set the icon size of Dock items to 16 pixels
-defaults write com.apple.dock tilesize -int 16
+# Set the icon size of Dock items to 56 pixels
+defaults write com.apple.dock tilesize -int 56
 
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
