@@ -42,7 +42,7 @@ echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
 
 echo "installing apps with brew cask"
-brew cask install alfred rectangle hyper insomnia visual-studio-code fork
+brew cask install alfred rectangle hyper insomnia visual-studio-code fork rocket
 
 
 ###############################################################################
