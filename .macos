@@ -31,6 +31,8 @@ echo "installing homebrew"
 echo "brew installing git"
 brew install git
 
+echo "brew installing docker"
+brew install docker
 
 ###############################################################################
 # Applications                                                                #
