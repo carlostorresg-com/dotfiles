@@ -44,9 +44,6 @@ curl -L https://git.io/n-install | bash
 echo "installing apps with brew cask"
 brew cask install alfred rectangle hyper insomnia visual-studio-code fork rocket
 
-echo "installing fonts"
-brew cask install font-hack font-inconsolata font-consolas
-
 echo "installing oh-my-zsh"
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
