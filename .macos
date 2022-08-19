@@ -51,9 +51,10 @@ echo "installing oh-my-zsh"
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "cloning dotfiles"
-git clone git@github.com:govea/dotfiles.git "${HOME}/dotfiles"
-ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
-ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
+git clone git@github.com:govea/dotfiles.git "${HOME}/dev/dotfiles"
+ln -s "${HOME}/dev/dotfiles/.zshrc" "${HOME}/.zshrc"
+ln -s "${HOME}/dev/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
+ln -s "${HOME}/dev/dotfiles/.hyper.js" "${HOME}/.hyper.js"
 
 
 ###############################################################################
