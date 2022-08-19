@@ -225,5 +225,7 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 
+echo "Hey, remember to import your Rectangle shortcuts from RectangleConfig.json!"
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
