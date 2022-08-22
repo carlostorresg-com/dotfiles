@@ -209,6 +209,14 @@
       "keyCode" : 17,
       "modifierFlags" : 786432
     },
+    "leftHalf" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1572864
+    },
+    "maximize" : {
+      "keyCode" : 36,
+      "modifierFlags" : 1572864
+    },
     "maximizeHeight" : {
       "keyCode" : 126,
       "modifierFlags" : 917504
@@ -224,6 +232,10 @@
     "restore" : {
       "keyCode" : 51,
       "modifierFlags" : 786432
+    },
+    "rightHalf" : {
+      "keyCode" : 124,
+      "modifierFlags" : 1572864
     },
     "smaller" : {
       "keyCode" : 27,
