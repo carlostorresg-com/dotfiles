@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # ~/.macos — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 # Modified by Carlos Torres
 # Run without downloading:
-# curl https://raw.githubusercontent.com/govea/dotfiles/master/.macos | bash
+# curl https://raw.githubusercontent.com/govea/dotfiles/master/.macos | zsh
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -36,7 +36,7 @@ brew install docker
 ###############################################################################
 
 echo "installing node (via n-install)"
-curl -L https://git.io/n-install | bash
+curl -L https://git.io/n-install | zsh
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
