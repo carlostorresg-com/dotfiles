@@ -211,30 +211,30 @@ ln -s "${HOME}/dev/github/dotfiles/.hyper.js" "${HOME}/.hyper.js"
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" \
-	"Address Book" \
-	"Calendar" \
-	"cfprefsd" \
-	"Contacts" \
-	"Dock" \
-	"Finder" \
-	"Google Chrome Canary" \
-	"Google Chrome" \
-	"Mail" \
-	"Messages" \
-	"Opera" \
-	"Photos" \
-	"Safari" \
-	"SizeUp" \
-	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal" \
-	"Transmission" \
-	"Tweetbot" \
-	"Twitter" \
-	"iCal"; do
-	killall "${app}" &> /dev/null
-done
+# for app in "Activity Monitor" \
+# 	"Address Book" \
+# 	"Calendar" \
+# 	"cfprefsd" \
+# 	"Contacts" \
+# 	"Dock" \
+# 	"Finder" \
+# 	"Google Chrome Canary" \
+# 	"Google Chrome" \
+# 	"Mail" \
+# 	"Messages" \
+# 	"Opera" \
+# 	"Photos" \
+# 	"Safari" \
+# 	"SizeUp" \
+# 	"Spectacle" \
+# 	"SystemUIServer" \
+# 	"Terminal" \
+# 	"Transmission" \
+# 	"Tweetbot" \
+# 	"Twitter" \
+# 	"iCal"; do
+# 	killall "${app}" &> /dev/null
+# done
 
 echo "Hey, remember to import your Rectangle shortcuts from RectangleConfig.json!"
 
