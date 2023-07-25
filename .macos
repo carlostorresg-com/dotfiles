@@ -42,7 +42,7 @@ echo "mkdir -p ${HOME}/dev/github"
 mkdir -p "${HOME}/dev/github"
 
 echo "cloning dotfiles"
-git clone git@github.com:govea/dotfiles.git "${HOME}/dev/github/dotfiles"
+git clone https://github.com/govea/dotfiles "${HOME}/dev/github/dotfiles"
 ln -s "${HOME}/dev/github/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dev/github/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
 ln -s "${HOME}/dev/github/dotfiles/.hyper.js" "${HOME}/.hyper.js"
