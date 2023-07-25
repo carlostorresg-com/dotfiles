@@ -22,11 +22,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "Hello $(whoami)! Let's get you set up."
 
 echo "installing homebrew"
-# install homebrew https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "adding homebrew to the path"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/carlostorres/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "${HOME}/.zprofile"
 eval "$(/opt/homebrew/bin/brew shellenv)"         
 
 echo "brew installing git"
@@ -60,18 +59,21 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing apps with brew cask"
-brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser dropbox google-drive postman
+brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser postman
 
 echo "installing oh-my-zsh"
-$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+###############################################################################
+# Github: Allow this computer to read/write to my repos
+###############################################################################
 # echo "Generating a new SSH key for GitHub"
 # ssh-keygen -t ed25519 -C "ctgovea+github@gmail.com" -f ~/.ssh/id_ed25519
 # eval "$(ssh-agent -s)"
 # touch ~/.ssh/config
 # echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
 # ssh-add -K ~/.ssh/id_ed25519
-# echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
+# echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub: https://github.com/settings/keys"
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -244,4 +246,3 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 echo "Hey, remember to import your Rectangle shortcuts from RectangleConfig.json!"
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
-
