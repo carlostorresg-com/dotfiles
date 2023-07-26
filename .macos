@@ -59,7 +59,7 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing apps with brew cask"
-brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser postman rocket kap
+brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser postman rocket kap cron
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
