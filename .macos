@@ -59,10 +59,23 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
 echo "installing apps with brew cask"
-brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser postman
+brew install --cask alfred rectangle hyper insomnia visual-studio-code fork numi obsidian slack spotify zoom brave-browser postman rocket
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+###############################################################################
+# Dev Experience
+###############################################################################
+echo "installing fonts"
+brew tap homebrew/cask-fonts
+brew install --cask font-victor-mono
+brew install --cask font-fira-mono-nerd-font
+brew install --cask font-hack-nerd-font
+brew install --cask font-inconsolata-nerd-font
+brew install --cask font-roboto-mono-nerd-font
+brew install --cask font-ubuntu-mono-nerd-font
 
 ###############################################################################
 # Github: Allow this computer to read/write to my repos
@@ -170,6 +183,8 @@ chflags nohidden ~/Library
 mkdir ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
+# Enable saving sreenshots as JPEG
+defaults write com.apple.screencapture type JPG
 
 ###############################################################################
 # Safari & WebKit                                                             #
