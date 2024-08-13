@@ -41,6 +41,18 @@ newRandomEmoji () {
 
 newRandomEmoji
 
+movtomp4() {
+  if [ -z "$1" ]; then
+    echo "Usage: movtomp4 <path/to/file.mov>"
+    return 1
+  fi
+
+  input_file="$1"
+  output_file="${input_file%.mov}.mp4"
+
+  ffmpeg -i "$input_file" -c:v libx264 -c:a aac -movflags +faststart "$output_file"
+}
+
 ## npm aliases
 alias ni="npm install";
 alias nrs="npm run start -s --";
